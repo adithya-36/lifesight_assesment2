@@ -1,0 +1,24 @@
+data:
+  raw_path: "data/raw/mmm_weekly.csv"
+  processed_path: "data/processed/processed_data.csv"
+
+model:
+  random_state: 42
+  test_size: 0.2
+  cv_folds: 5
+
+features:
+  media_channels:
+    - facebook_spend
+    - google_spend
+    - tiktok_spend
+    - snapchat_spend
+    - instagram_spend
+  other_features:
+    - social_followers
+    - average_price
+    - promotions
+    - emails_send
+    - sms_send
+  target: revenue
+  mediator: google_spend
